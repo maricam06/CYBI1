@@ -1,0 +1,367 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.titulo{
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+
+}
+.texto{
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    color: #ACAD94;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.hero{
+    background-color: #384D48;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    min-height: 200px;
+    height: 0vh;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.nav{
+    --state-close: scale(0);
+    --state-hamburguer:scale(1);
+    --state-menu: translate(-100%);
+    padding: 40px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.nav:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer:scale(0);
+}
+
+.nav__logo{
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.nav__hamburguer, .nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav__hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav__close{
+    transform: var(--state-close);
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+.nav__links{
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+
+.nav__item{
+    list-style: none;
+}
+
+.nav__link{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+@media (min-width:768px) {
+    .nav{
+        --state-hamburguer:scale(0);
+        --state-menu: translate(0);
+    }
+    
+    .nav:target{
+        --state-close: scale(0);
+    }
+
+    .nav__links{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+    
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+.comision{
+    font-family: 'Stint Ultra Condensed', serif;
+    font-size: 2.4em;
+    margin: auto;
+    display: block;
+    color: #F9F9FC;
+   
+}
+
+.cetap{
+    max-width: 61px;
+    max-height: 61px;
+    position: absolute;
+    left: 0px;
+}
+
+
+.izquierda{
+    background-color: #ACAD94;
+    height: 65vh;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 10px;
+    margin: 10px;
+}
+.derecha{
+  
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    
+    width: 50%;
+    height: 65vh;
+}
+#pantalla{
+    display: flex;
+}
+
+h1{
+    padding: 10vh;
+    font-family: 'Rubik Mono One', monospace;
+}
+
+
+
+.izquierdaq{
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 65vh;
+    margin: 10px;
+    
+}
+.derechaq{
+    border-radius: 10px;
+    font-size: 25px;
+    background-color: #ACAD94;
+    height: 65vh;
+    width: 50%;
+    margin: 10px;
+}
+#pantallaq{
+    display: flex;
+}
+
+#contactanos{
+    background-color: #ACAD94;
+    display: flex;
+}
+
+.pastoral{
+    margin: auto;
+    text-align: center;
+    color: #F9F9FC;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.uwu{
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px #ACAD94;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    
+}
+.llamame{
+    background-color: #ACAD94;
+    height: 70vh;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.info{
+    font-family: 'Quicksand', sans-serif;
+    text-align: 50px;
+}
+
+.llamame ul{
+    list-style: none;
+    color: #F9F9FC;
+    list-style: none;
+    color: #F9F9FC;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    
+}
+.mapa{
+    width: 50%;
+    height: 70vh;
+    padding: 2vh;
+    border-radius: 10px;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.slider{
+    width: 50%;
+    height: 65vh;
+    border-radius: 10px;
+    /*object-fit: cover;*/
+    overflow: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+.navmanual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual{
+    border: 2px solid slategray;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+.manual:not(:last-child){
+    margin-right: 40px;
+
+}
+
+.manual:hover{
+    background: #3737374D;
+}
+
+#radio1:checked ~ .primero{
+    margin-left: 0;
+
+}
+
+#radio2:checked ~ .primero{
+    margin-left: -20%;
+    
+}
+#radio3:checked ~ .primero{
+    margin-left: -40%;
+    
+}
+#radio4:checked ~ .primero{
+    margin-left: -60%;
+    
+}
+
+.navigationauto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigationauto div{
+    border: 2px solid #ACAD94;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigationauto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigationauto .auto-btn1{
+    background: #384D48;
+}
+#radio2:checked ~ .navigationauto .auto-btn2{
+    background: #384D48;
+}
+#radio3:checked ~ .navigationauto .auto-btn3{
+    background: #384D48;
+}
+#radio4:checked ~ .navigationauto .auto-btn4{
+    background: #384D48;
+}
+
+

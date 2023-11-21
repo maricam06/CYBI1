@@ -1,0 +1,251 @@
+body{
+    /*background: url(imagenes/fondo\ inicio.jpg);*/
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/* body{
+    background: url(imagenes/fondo\ inicio.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+/*
+.menu{
+    background-color: #384D48;
+    width: 100%;
+    list-style: none;
+    min-height: 6.3vh;
+    display: grid;
+    place-content: center;  
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display: block;
+    font-size: 20px;
+    font-family: 'Stint Ultra Condensed', serif;
+
+}
+.menu li{
+    display: inline-block;
+    text-align: center;
+
+
+}
+
+.menu li a:hover{
+    background: #6E7271;
+    padding: 20px;
+}
+*/
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    color: #ACAD94;
+}
+
+.hero{
+    background-color: #384D48;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    min-height: 200px;
+    height: 0vh;
+}
+
+.nav{
+    --state-close: scale(0);
+    --state-hamburguer:scale(1);
+    --state-menu: translate(-100%);
+    padding: 40px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.nav:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer:scale(0);
+}
+
+.nav__logo{
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.nav__hamburguer, .nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav__hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav__close{
+    transform: var(--state-close);
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+.nav__links{
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+
+.nav__item{
+    list-style: none;
+}
+
+.nav__link{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+@media (min-width:768px) {
+    .nav{
+        --state-hamburguer:scale(0);
+        --state-menu: translate(0);
+    }
+    
+    .nav:target{
+        --state-close: scale(0);
+    }
+
+    .nav__links{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+    
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+
+.comision{
+    font-family: 'Stint Ultra Condensed', serif;
+    font-size: 2.4em;
+    margin: auto;
+    display: block;
+    color: #F9F9FC;
+   
+}
+
+.cetap{
+    max-width: 61px;
+    max-height: 61px;
+    position: absolute;
+    left: 0px;
+}
+
+
+
+
+.follow{
+    background: url(imagenes/follow.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    height: 30vh;
+}
+.con{
+    margin: auto;
+    text-align: center;
+    color: #F9F9FC;
+}
+
+.uwu{
+    display: flex;
+    
+    border-radius: 8px;
+    box-shadow: 0px 2px 2px #ACAD94;
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+    
+}
+/* .llamame{
+    background-color: #ACAD94;
+    height: 70vh;
+    width: 50%;
+}
+
+.llamame ul{
+    list-style: none;
+    color: #F9F9FC;
+} */
+.mapa{
+    width: 50%;
+    height: 70vh;
+    padding: 2vh;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.llamame{
+    background-color: #ACAD94;
+    height: 70vh;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.info{
+    font-family: 'Quicksand', sans-serif;
+    text-align: 50px;
+}
+
+.llamame ul{
+    list-style: none;
+    color: #F9F9FC;
+    list-style: none;
+    color: #F9F9FC;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    
+}

@@ -1,0 +1,277 @@
+body{
+    /*background: url(imagenes/fondo\ inicio.jpg);*/
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    background-color: #E4E4D6;
+    
+}
+.titulo{
+    font-size: 30px;
+}
+.texto{
+    font-size: 20px;
+}
+.container{
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    color: #ACAD94;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.hero{
+    background-color: #384D48;
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: cover;
+    min-height: 200px;
+    height: 0vh;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.nav{
+    --state-close: scale(0);
+    --state-hamburguer:scale(1);
+    --state-menu: translate(-100%);
+    padding: 40px 0;
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.nav:target{
+    --state-menu: translate(0);
+    --state-close: scale(1);
+    --state-hamburguer:scale(0);
+}
+
+.nav__logo{
+    font-size: 2.5rem;
+    z-index: 1;
+}
+
+.nav__hamburguer, .nav__close{
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .4s transform;
+}
+
+.nav__hamburguer{
+    transform: var(--state-hamburguer);
+}
+
+.nav__close{
+    transform: var(--state-close);
+}
+
+.nav__icon{
+    width: 40px;
+}
+
+.nav__links{
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+
+.nav__item{
+    list-style: none;
+}
+
+.nav__link{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+@media (min-width:768px) {
+    .nav{
+        --state-hamburguer:scale(0);
+        --state-menu: translate(0);
+    }
+    
+    .nav:target{
+        --state-close: scale(0);
+    }
+
+    .nav__links{
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+    
+        transform: unset;
+
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .nav__link{
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+
+
+img{
+    border-radius: 30px;
+    transition: 0.4s;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.infancia{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 100px 0;
+    
+}
+
+.imagen1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen1:nth-child(1){
+    grid-column-start: span 2;
+}
+
+.imagen1:nth-child(4){
+    grid-column-start: span 2;
+}
+
+@media(max-width:991px){
+    .infancia{
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .imagen1:nth-child(1){
+        grid-column-start: span 1;
+    }
+    
+    .imagen1:nth-child(4){
+        grid-column-start: span 1;
+    }
+}
+
+
+.catequesis{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 100px 0;
+}
+
+.imagen2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen2:nth-child(1){
+    grid-column-start: span 2;
+}
+
+.imagen2:nth-child(4){
+    grid-column-start: span 2;
+}
+
+@media(max-width:991px){
+    .catequesis{
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .imagen2:nth-child(1){
+        grid-column-start: span 1;
+    }
+    
+    .imagen2:nth-child(4){
+        grid-column-start: span 1;
+    }
+}
+
+
+
+.matrimonio{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    padding: 100px 0;
+}
+
+.imagen3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen3:nth-child(1){
+    grid-column-start: span 2;
+}
+
+.imagen3:nth-child(4){
+    grid-column-start: span 2;
+}
+
+@media(max-width:991px){
+    .matrimonio{
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .imagen3:nth-child(1){
+        grid-column-start: span 1;
+    }
+    
+    .imagen3:nth-child(4){
+        grid-column-start: span 1;
+    }
+}
+
+#infancia{
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+#catequesis{
+    font-family: 'Bebas Neue', sans-serif;
+
+}
+
+#matrimonio{
+    font-family: 'Bebas Neue', sans-serif;
+
+}
